@@ -1,0 +1,7 @@
+1. Learned how to use Bitmap class
+2. How to fill the bitmap with solid color
+3. Fill the map with random noise
+4. Generating texture using sine waves
+5. Generating texture using perlin noise (copy-pasted implementation)
+6. Genearting texture using a single octave perlin noise
+7. Generating perlin noise using average different octaves
