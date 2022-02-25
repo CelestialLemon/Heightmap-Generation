@@ -104,12 +104,15 @@ namespace Heightmap_Generation
                 for(int x = 0; x < width; x++)
                 {
                     float avg_val = 0.0f;
+                    float totalAmplitude = 0.0f;
                     for(int i = 0; i < noiseMap_arr.Count; i++)
                     {
-                        avg_val += noiseMap_arr[i][x, y];
+                        float amplitude = 1.0f / (float)Math.Pow(2, noiseMap_arr.Count - i);
+                        totalAmplitude += amplitude;
+                        avg_val += noiseMap_arr[i][x, y] * amplitude;
                     }
 
-                    avg_val /= noiseMap_arr.Count;
+                    avg_val /= totalAmplitude;
                     noise[x, y] = avg_val;
                 }
             }
