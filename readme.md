@@ -28,7 +28,7 @@ Sample Random Noise
 ![Random Noise Texture](https://i.ibb.co/PTYPYCp/random-noise.png)
 
 ### Octaves
-For generating perlin noise we have to generate octaves of the random noise. We select pixels at intervals linearly interpolate remaining pixels to make it smooth.
+For generating perlin noise we have to generate octaves of the random noise. We select pixels at intervals and linearly interpolate remaining pixels to make it smooth.
 
 #### Wavelength
 The intervals at which we select pixels is dependent on *wavelength* of the Perlin noise function. The best value can be differnt in differnt use cases. Using ```wavlength = 2.0f``` is a good starting point for our project.
