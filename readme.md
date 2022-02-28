@@ -35,7 +35,7 @@ The intervals at which we select pixels is dependent on *wavelength* of the Perl
 
 We can find the interpolation interval by using formula
 ```cs
-int stide = (int)(Math.Pow(2.0f, octave_number));
+int stride = (int)(Math.Pow(2.0f, octave_number));
 ```
 
 We find perlin octaves for different values of octave_number and then combine the octaves to generate the final heightmap.
@@ -74,7 +74,7 @@ Octave #7
 ### Amplitude
 To generate perlin noise we combine the octaves generated to a final image texture. But if just average out the values in different octaves we end up with a very messy looking noise very similar to the random noise we generated earlier.
 
-So to avoid this we use weighted average. We use amplitude to decide how much weight each octave should carry. This amplitude will define how much the octave influences the final image output. Just like wavelength, the is no best value of amplitude and should be found by experimentation of our particular use case. But ```amplitude = 0.5f``` is a good value to start messing with perlin noise so we will use this a default value.
+So to avoid this we use weighted average. We use amplitude to decide how much weight each octave should carry. This amplitude will define how much the octave influences the final image output. Just like wavelength, there is no best value of amplitude and should be found by experimentation of our particular use case. But ```amplitude = 0.5f``` is a good value to start messing with perlin noise so we will use this as default value.
 
 We the compute amplitude for each octave using formula
 ```cs
